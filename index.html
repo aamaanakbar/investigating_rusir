@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>investigating_rusir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="icon" href="files/box.png" type="image">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <header class="header area">
+
+        <ul class="bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <section>
+            <h1>Investigating Robust Unsupervised Stylegan Image Restoration</h1>
+        </section>
+        <h1> </h1>
+        <h3>Akbar Ali<sup>1</sup>,Indra Deep Mastan<sup>2</sup>,Shanmuganathan Raman<sup>1</sup></h3>
+        <h3 style="margin-top: 20px;"><a href="https://2025.ieeeicip.org/" class="sigAnchor">ICIP 2025</a></h3>
+        <h5 style="margin-top: 20px;"><sup>1 </sup>Indian Institute Of Technology Gandhinagar, India, &nbsp;&nbsp;&nbsp;&nbsp;<sup>2 </sup>Indian Institute of Technology (BHU) Varanasi, India.</h5>
+    </header>
+
+    <main class="content">
+        <div style="justify-content: center; display: flex; margin-bottom: 20px;">
+            <a class="btn btn-dark" href="https://arxiv.org/abs/2501.01174"><img src="files/description.svg"/> Paper</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-dark" href="https://arxiv.org/abs/2501.01174"><img src="files/description.svg"/> Supplementary</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-dark" href="https://www.kaggle.com/datasets/aamaanakbar/cotton99-10"><img src="files/description.svg"/> Drone Data(99)</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-dark" href="https://github.com/aamaanakbar/IRUSIR"><img src="files/database.svg"/> Code</a>
+        </div>
+        <section>
+            <h2>Abstract</h2>
+            <p class="abstract">
+                Recently, generative priors have shown significant improvement for unsupervised image restoration. This study explores the incorporation of multiple loss functions that capture various perceptual and structural aspects of image quality. Our proposed method improves robustness across multiple tasks, including denoising, upsampling, inpainting, and deartifacting, by utilizing a comprehensive loss function based on Learned Perceptual Image Patch Similarity(LPIPS), Multi-Scale Structural Similarity Index Measure Loss(MS-SSIM), Consistency, Feature, and Gradient losses. The experimental results demonstrate marked improvements in accuracy, fidelity, and visual realism in unsupervised image restoration, showcasing the effectiveness of our approach in delivering high-quality results. The experimental results validate the superiority of our approach and offer a promising direction for future advancements in generative-based image restoration methods.  
+            </p>
+        </section>
+
+
+
+
+
+        <section>
+            <h2>Proposed loss function</h2>
+            <figure>
+                <img src="images/lossarc.png" alt="Field and Drone Captured Images" style="width: 100%;"/>
+                <figcaption>
+                   Image restoration results using StyleGAN inversion, showcasing the effectiveness of our method in recovering high-quality images. 
+                </figcaption>
+            </figure>
+        </section>
+
+
+
+        <section>
+            <h2>Results : Image enhancement</h2>
+            <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+                <div class="tabResult activeResult" data-image="ResultImg1" style="font-size: 20px">Image enhancement</div>
+                <div class="tabResult" data-image="ResultImg2" style="font-size: 20px">Sementic segmentation</div>
+            </div>
+            <div class="row">
+                <div class="col-md-0"></div>
+                <div class="col-md-12">
+                    <img id="ResultImg1" class="imgResult" src="images/2025-05-20_23-53.png" alt="Internal Error" >
+                    <img id="ResultImg2" class="hiddenResult imgResult" src="images/upsam_inp.png" alt="Internal Error">
+                </div>
+                <div class="col-md-0"></div>
+            </div>
+        </section>
+
+
+            
+
+            
+        <!-- <section>
+                    <h2>Explore the Dataset</h2>
+                    <p>Explore the dataset and contribute to the future of agricultural technology!</p>
+        </section> -->
+        
+
+        <section style="margin-bottom: 0px;">
+                <h2>Citations</h2>
+                <div style="padding: 15px; border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 5px;">
+                    <pre style="font-family: monospace, sans-serif; font-size: 14px; line-height: 1.5; color: #555; margin-bottom: 0px;">
+            @article{debnath2025l3d,
+                title={COT-AD: COTTON ANALYSIS DATASET},
+                author={Akbar, },
+                journal={arXiv preprint arXiv:},
+                year={2025}
+            }</pre>
+                </div>
+
+                <p style="margin: 10px 0; font-size: 14px; color: #333; text-align: center;">
+                    The code is borrowed from the following source: 
+                    <a href="https://lvsn.github.io/RobustUnsupervised/" target="_blank" style="color: #0066cc; text-decoration: none;">Robust Unsupervised StyleGAN Image Restoration</a>
+                </p>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        Akbar Ali, CVIG Lab, Indian Institute of Technology Gandhinagar
+    </footer>
+
+    <script>
+        // Results Process Navigation
+        const tabsResult = document.querySelectorAll('.tabResult');
+        const imagesResult = document.querySelectorAll('.imgResult');
+      
+        tabsResult.forEach(tab => {
+          tab.addEventListener('click', () => {
+            tabsResult.forEach(t => t.classList.remove('activeResult'));
+            imagesResult.forEach(img => img.classList.add('hiddenResult'));
+      
+            tab.classList.add('activeResult');
+      
+            const imageId = tab.getAttribute('data-image');
+            document.getElementById(imageId).classList.remove('hiddenResult');
+          });
+        });
+
+         // === Macaque Dataset Functions ===
+        function mac_getUniqueRandomNumbers(count, min, max) {
+        const numbers = new Set();
+        while (numbers.size < count) {
+            const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+            numbers.add(randomNum);
+        }
+        return Array.from(numbers);
+        }
+
+        function mac_padNumber(num, size) {
+        let s = "000000" + num;
+        return s.substr(s.length - size);
+        }
+
+        function mac_loadImages(action) {
+        const container = document.getElementById('mac_image-container');
+        container.innerHTML = ''; // Clear previous images
+
+        const grid = document.createElement('div');
+        grid.className = 'mac_grid-container';
+
+        // Using 1 to 499 for Macaque as per your code
+        const imageNumbers = mac_getUniqueRandomNumbers(15, 0, 499);
+
+        imageNumbers.forEach(num => {
+            const img = document.createElement('img');
+            const formattedNum = mac_padNumber(num, 6);
+            img.src = `Macaque/${action}/${formattedNum}.jpg`;
+            img.alt = `${action} image ${formattedNum}`;
+            grid.appendChild(img);
+        });
+
+        container.appendChild(grid);
+        }
+
+        function mac_setActiveAction(item) {
+        document.querySelectorAll('.mac_action-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        const action = item.getAttribute('data-action');
+        mac_loadImages(action);
+        }
+
+        document.querySelectorAll('.mac_action-item').forEach(item => {
+        item.addEventListener('click', () => {
+            mac_setActiveAction(item);
+        });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const firstMacItem = document.querySelector('.mac_action-item');
+        if (firstMacItem) {
+            mac_setActiveAction(firstMacItem);
+        }
+        });
+
+
+        // === Horse Dataset Functions ===
+        function hor_getUniqueRandomNumbers(count, min, max) {
+        const numbers = new Set();
+        while (numbers.size < count) {
+            const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+            numbers.add(randomNum);
+        }
+        return Array.from(numbers);
+        }
+
+        function hor_padNumber(num, size) {
+        let s = "000000" + num;
+        return s.substr(s.length - size);
+        }
+
+        function hor_loadImages(action) {
+        const container = document.getElementById('hor_image-container');
+        container.innerHTML = ''; // Clear previous images
+
+        const grid = document.createElement('div');
+        grid.className = 'hor_grid-container';
+
+        // Assuming there are 500 images for Horse
+        const imageNumbers = hor_getUniqueRandomNumbers(15, 0, 499);
+
+        imageNumbers.forEach(num => {
+            const img = document.createElement('img');
+            const formattedNum = hor_padNumber(num, 6);
+            img.src = `Horse/${action}/${formattedNum}.jpg`;
+            img.alt = `${action} image ${formattedNum}`;
+            grid.appendChild(img);
+        });
+
+        container.appendChild(grid);
+        }
+
+        function hor_setActiveAction(item) {
+        document.querySelectorAll('.hor_action-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        const action = item.getAttribute('data-action');
+        hor_loadImages(action);
+        }
+
+        document.querySelectorAll('.hor_action-item').forEach(item => {
+        item.addEventListener('click', () => {
+            hor_setActiveAction(item);
+        });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const firstHorItem = document.querySelector('.hor_action-item');
+        if (firstHorItem) {
+            hor_setActiveAction(firstHorItem);
+        }
+        });
+    </script>
+
+</body>
+</html>

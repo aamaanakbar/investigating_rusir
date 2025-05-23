@@ -1,0 +1,348 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+.header {
+    background-color: #0366d6;
+    color: #ffffff;
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+/* Main content styles */
+.content {
+    padding: 20px;
+    background-color: #eaebe9;
+}
+
+.content section {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #757575;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.content h2 {
+    margin-bottom: 0px;
+    
+    color: #242424; 
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #24292e;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Custom */
+p {
+    text-align: justify;
+}
+.scribImg {
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 20px;
+}
+.scribImgCol{
+    padding:1px;
+}
+.rowHeadding{
+    padding: 2px; 
+    color:#ffffff;
+    text-align: center;
+    /* font-family: serif; */
+    font-weight: bold;
+    background-color: #00152d;
+    border: 2px solid white;
+    margin-bottom: 5px;
+    border-radius: 50px;
+}
+.generationLabel{
+    display: flex; 
+    justify-content: center;
+    /* font-family: serif; */
+    color: #a9bace;
+    align-items: center;
+}
+.realImg{
+    border-radius: 20px;
+}
+.sigAnchor{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+.sigAnchor:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.teaserImage{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    z-index: -1;
+}
+#placeHolder{
+    height: 50vh;
+}
+
+#bgWrap{
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.abstract{
+    padding-left: 50px; padding-right: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* Styling for the navigation tabs for Results */
+.tabResult {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  width: 49%;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid rgb(195, 195, 195);
+}
+.activeResult {
+  border-left: 1px solid rgb(195, 195, 195);
+  border-right: 1px solid rgb(195, 195, 195);
+  border-top: 1px solid rgb(195, 195, 195);
+  border-bottom: 1px solid white;
+  border-radius: 10px 10px 0px 0px;
+}
+.hiddenResult {
+  display: none;
+}
+.imgResult {
+  width: 100%;
+}
+
+
+/* //////////////////////// Dataset Navigatoion ///////////////////////// */
+/* Style the grid of images: 5 columns, which makes 3 rows with 15 images */
+.mac_grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.mac_grid-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Style the action items to look clickable */
+.mac_action-item {
+  cursor: pointer;
+  padding-right: 10px;
+}
+.mac_action-item:hover {
+  background-color: #f0f0f0;
+}
+/* Active action styling */
+.mac_action-item.active {
+  color: #278afb;
+}
+
+/* Style the grid of images: 5 columns, which makes 3 rows with 15 images */
+.hor_grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.hor_grid-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Style the action items to look clickable */
+.hor_action-item {
+  cursor: pointer;
+  padding-right: 10px;
+}
+.hor_action-item:hover {
+  background-color: #f0f0f0;
+}
+/* Active action styling */
+.hor_action-item.active {
+  color: #278afb;
+}
+
+
+
+
+
+
+
+.area {
+    position: relative;
+    background: #0366d6;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    overflow: hidden;
+  }
+
+/* //////////////////////// Animations //////////////////////// */
+    
+  /* Container for the floating shapes */
+  .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+    
+  /* Base styling for each bubble converted to a rounded square */
+  .bubbles li {
+    position: absolute;
+    display: block;
+    background: rgba(255, 255, 255, 0.3);
+    bottom: -150px; /* Start below the visible area */
+    border-radius: 10px; /* Rounded corners */
+    animation: floatAndRotate linear infinite;
+  }
+    
+  /* Define variations for each shape with slower animation durations */
+  .bubbles li:nth-child(1) {
+    left: 10%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 24s;
+    animation-delay: 0s;
+  }
+    
+  .bubbles li:nth-child(2) {
+    left: 20%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 30s;
+    animation-delay: 2s;
+  }
+    
+  .bubbles li:nth-child(3) {
+    left: 25%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 36s;
+    animation-delay: 4s;
+  }
+    
+  .bubbles li:nth-child(4) {
+    left: 40%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 20s;
+    animation-delay: 0s;
+  }
+    
+  .bubbles li:nth-child(5) {
+    left: 55%;
+    width: 70px;
+    height: 70px;
+    animation-duration: 40s;
+    animation-delay: 3s;
+  }
+    
+  .bubbles li:nth-child(6) {
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 24s;
+    animation-delay: 1s;
+  }
+    
+  .bubbles li:nth-child(7) {
+    left: 75%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 28s;
+    animation-delay: 4s;
+  }
+    
+  .bubbles li:nth-child(8) {
+    left: 85%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 22s;
+    animation-delay: 0s;
+  }
+    
+  .bubbles li:nth-child(9) {
+    left: 90%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 32s;
+    animation-delay: 2s;
+  }
+    
+  .bubbles li:nth-child(10) {
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 26s;
+    animation-delay: 3s;
+  }
+    
+  /* Keyframes for floating upward and rotating */
+  @keyframes floatAndRotate {
+    0% {
+      transform: translateY(0) rotate(0deg) scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(-1000px) rotate(360deg) scale(1.5);
+      opacity: 0;
+    }
+  }
+  
